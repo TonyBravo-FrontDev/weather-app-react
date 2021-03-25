@@ -1,0 +1,29 @@
+.instagram {
+  color: #fa63bd;
+  transition: all 0.4s;
+  transform: scale(1);
+}
+
+.instagram:hover {
+  transform: scale(1.5);
+}
+
+.twitter {
+  color: #03bffb;
+  transition: all 0.4s;
+  transform: scale(1);
+}
+
+.twitter:hover {
+  transform: scale(1.5);
+}
+
+.linkedin {
+  color: #1f84bb;
+  transition: all 0.4s;
+  transform: scale(1);
+}
+
+.linkedin:hover {
+  transform: scale(1.5);
+}

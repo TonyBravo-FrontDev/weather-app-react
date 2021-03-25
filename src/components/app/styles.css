@@ -1,0 +1,330 @@
+.searchbox {
+  position: relative;
+  display: block;
+  width: 80%;
+  max-width: 40px;
+  transition: 0.4s linear;
+  overflow: hidden;
+  margin-left: 1rem;
+  z-index: 400;
+  color: transparent;
+}
+
+.searchbox .searchbox__input {
+  display: block;
+  appearance: none;
+  width: 100%;
+  height: 30px;
+  border: none;
+  outline: none;
+  border-radius: 32px;
+  background-color: transparent;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #242424;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.4s linear;
+}
+
+.searchbox .searchbox__input::placeholder {
+  color: #242424;
+}
+
+.searchbox__icon {
+  position: absolute;
+  right: calc(53px / 2);
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.searchbox .searchbox__icon path {
+  fill: #ffffff;
+  transition: 0.4s linear;
+}
+
+.searchbox:focus-within {
+  max-width: 300px;
+}
+
+.searchbox:focus-within .searchbox__input {
+  background-color: #fff;
+  padding-right: 50px;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+.searchbox:focus-within .searchbox__icon path {
+  fill: #242424;
+}
+
+.menu-btn {
+  display: block;
+  z-index: 300;
+  cursor: pointer;
+}
+
+.nav-link-menu {
+  font-family: "Roboto", sans-serif;
+  z-index: 3;
+  background: transparent;
+  height: 478px;
+  width: 84%;
+  flex-direction: column;
+  clip-path: circle(100px at 90% -10%);
+  -webkit-clip-path: circle(100px at 90% -10%);
+  transition: all 0.6s ease-out;
+  pointer-events: none;
+  list-style: none;
+  position: absolute;
+  top: -10px;
+  left: -3px;
+}
+
+.nav-link-menu li {
+  position: relative;
+}
+
+.nav-link-menu form {
+  position: absolute;
+  top: 100px;
+  right: 40px;
+}
+
+@media (min-width: 1200px) {
+  .nav-link-menu form {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+  }
+}
+
+.nav-link-menu .select {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border: none;
+  padding: 9px;
+}
+
+.input-search {
+  border: none;
+  padding: 9px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.submit {
+  border: none;
+  padding: 9px 15px;
+  color: #fff;
+  margin-top: 2rem;
+  cursor: pointer;
+  border-radius: 32px;
+  background-color: #1f84bb;
+  transition: all 0.3s;
+}
+
+.submit:hover {
+  transition: all 0.3s;
+  background-color: #189de5;
+}
+
+.nav-link-menu.open {
+  z-index: 200;
+  height: 478px;
+  width: 84%;
+  transition: all 0.6s;
+  clip-path: circle(1000px at 90% -10%);
+  -webkit-clip-path: circle(1000px at 90% -10%);
+  pointer-events: all;
+}
+
+@media (max-width: 599px) {
+  .nav-link-menu {
+    font-family: "Roboto", sans-serif;
+    z-index: 3;
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(100px at 90% -10%);
+    -webkit-clip-path: circle(100px at 90% -10%);
+    transition: all 0.6s ease-out;
+    pointer-events: none;
+    list-style: none;
+    position: fixed;
+  }
+  .nav-link-menu.open {
+    background: #242424;
+    z-index: 200;
+    height: 100%;
+    width: 90.2%;
+    transition: all 0.6s;
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav-link-menu {
+    font-family: "Roboto", sans-serif;
+    z-index: 3;
+    background: transparent;
+    height: 100%;
+    width: 84%;
+    flex-direction: column;
+    clip-path: circle(100px at 90% -10%);
+    -webkit-clip-path: circle(100px at 90% -10%);
+    transition: all 0.6s ease-out;
+    pointer-events: none;
+    list-style: none;
+    position: absolute;
+    top: -15px;
+    left: -10px;
+  }
+
+  .nav-link-menu.open {
+    background: #242424;
+    z-index: 200;
+    height: 499px;
+    width: 88%;
+    transition: all 0.6s;
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .nav-link-menu {
+    font-family: "Roboto", sans-serif;
+    z-index: 3;
+    background: transparent;
+    height: 100%;
+    width: 84%;
+    flex-direction: column;
+    clip-path: circle(100px at 90% -10%);
+    -webkit-clip-path: circle(100px at 90% -10%);
+    transition: all 0.6s ease-out;
+    pointer-events: none;
+    list-style: none;
+    position: absolute;
+    top: -16px;
+    left: -2px;
+  }
+
+  .nav-link-menu.open {
+    background: #242424;
+    z-index: 200;
+    height: 600px;
+    width: 88%;
+    transition: all 0.6s;
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+    border-radius: 10px;
+  }
+}
+
+/* Hamburger line */
+.menu-btn div {
+  position: relative;
+  top: 50%;
+  right: 7%;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+  z-index: 300;
+}
+
+/* Hamburger top & bottom line */
+.menu-btn > div:before,
+.menu-btn > div:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background: inherit;
+  height: 3px;
+  width: 100%;
+  z-index: 1;
+}
+.menu-btn > div:after {
+  top: -10px;
+}
+
+/* Toggler Animation */
+.menu-btn.open > div {
+  transform: rotate(135deg);
+}
+.menu-btn.open > div:before,
+.menu-btn.open > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.icon-cloud {
+  font-size: 2rem;
+}
+
+@media (min-width: 1200px) {
+  .icon-cloud {
+    font-size: 1.5rem;
+  }
+}
+
+/* Error */
+
+.error {
+  background-color: #ff4d4d;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.celsius {
+  border: none;
+  color: #242424;
+  background-color: #FFFFFF;
+  border-radius: 32px;
+  padding: 0.6rem;
+  font-size: 12px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.celsius:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.3);
+}
+
+.fahrenheit{
+  border: none;
+  color: white;
+  margin-left: 0.5rem;
+  background-color: #242424;
+  border-radius: 32px;
+  font-size: 12px;
+  padding: 0.6rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fahrenheit:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.3);
+}
